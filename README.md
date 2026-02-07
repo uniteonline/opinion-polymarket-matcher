@@ -65,4 +65,3 @@ python -m discovery.review_cli --config discovery/config.yaml
 
 ## Notes
 - 该仓库仅保留市场匹配与发现逻辑，不包含交易/对冲模块。
-- 请勿提交真实 API Key。
