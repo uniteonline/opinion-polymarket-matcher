@@ -1,0 +1,18 @@
+[Unit]
+Description=Opinion-Polymarket Discovery Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/opinion-polymarket-matcher
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/opt/opinion-polymarket-matcher
+ExecStart=/opt/opinion-polymarket-matcher/.venv/bin/python -m discovery.run --config discovery/config.yaml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

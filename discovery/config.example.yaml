@@ -1,0 +1,45 @@
+database_path: ./data/discovery.db
+
+opinion:
+  base_url: https://proxy.opinion.trade:8443/openapi/market
+  api_key: ""  # or set env OPINION_OPENAPI_KEY
+  request_timeout_sec: 30
+  page_limit: 20
+  max_pages: 20
+  request_sleep_ms: 200
+  min_event_volume: 500000
+  market_type: 2
+  sort_by: 2
+  max_rps: 15
+
+polymarket:
+  base_url: https://gamma-api.polymarket.com
+  request_timeout_sec: 30
+  limit: 200
+  max_pages: 50
+  request_sleep_ms: 1000
+  include_closed: false
+  include_archived: false
+  active_only: true
+  search_mode: scan
+  search_limit: 200
+  public_search_retry_max: 4
+  public_search_retry_base_sec: 30
+  public_search_params: {}
+
+matching:
+  min_confidence: 0.6
+  title_gate_min: 0.45
+  child_title_gate_min: 0.45
+  weight_title: 0.5
+  weight_labels: 0.3
+  weight_teams: 0.3
+  weight_time: 0.2
+  max_time_diff_hours: 12
+  time_full_score_hours: 1
+
+schedule:
+  interval_minutes: 1200
+
+logging:
+  level: INFO

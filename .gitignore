@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+
+.venv/
+venv/
+env/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# Local configuration
+/discovery/config.yaml
+
+# Local data
+*.db
+/data/
+/records/
